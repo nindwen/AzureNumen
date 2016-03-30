@@ -1,0 +1,62 @@
+$dark: #1b1b1b;
+$light: #eeeeee;
+$accent: #3498db;
+
+$font-stack: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+
+body {
+      font-family: $font-stack;
+      background: $dark;
+      color: $light;
+}
+
+#content {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 20px;
+      
+      img {
+      }
+
+      blockquote {
+            font-style: italic;
+      }
+}
+
+header, footer {
+      font-family: $font-stack;
+      background: $light;
+      color: $dark;
+      height: 2em;
+      display: flex;
+      align-items: center;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+
+      width: 500px;
+      margin: auto;
+      padding: 10px;
+
+
+       h1 {
+             font-weight: 800;
+       }
+}
+
+table {
+      margin: 0 auto;
+}
+
+th, td {
+      padding: 10px;
+      margin: 10px;
+}
+
+tr {
+      border-bottom: 1px solid $light;
+}
+
+a, a:visited {
+      color: $accent;
+}

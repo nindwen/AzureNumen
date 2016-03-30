@@ -1,11 +1,16 @@
+default: output/index.html output/css/main.css push
 
-%.html: %.md head.html foot.html
-	markdown $< | cat head.html - foot.html | tidy -iq -utf8 > output/$@
+output/index.html: index.md head.html foot.html
+	pandoc $< | cat head.html main.css head2.html - foot.html | tidy -iq -utf8 > $@
 
-css: sass/main.scss
-	sass --style compressed --update sass:output/css
+output/css/main.css: main.scss
+	sass --style compressed --update .:.
 
-all: index.html css
-
-push: all
+.PHONY: push
+push:
 	rsync -a output/ usvs:www/nindwen.blue
+
+.PHONY: clean
+clean:
+	rm output/*
+
