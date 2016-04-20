@@ -1,6 +1,6 @@
 default: output/index.html output/css/main.css push
 
-output/index.html: index.md head.html foot.html
+output/index.html: index.md head.html head2.html foot.html
 	pandoc $< | cat head.html main.css head2.html - foot.html | tidy -iq -utf8 > $@
 
 output/css/main.css: main.scss
