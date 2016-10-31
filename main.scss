@@ -1,20 +1,26 @@
-$dark: #1b1b1b;
-$light: #eeeeee;
-$accent: #3498db;
+$back: #f0f0f0;
+$front: #1b1b1b;
+$accent: #de935f;
 
-$font-stack: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+$font-stack: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
 body {
       font-family: $font-stack;
-      background: $dark;
-      color: $light;
+      background: $back;
+      color: $front;
 }
 
 #content {
       max-width: 500px;
       margin: auto;
-      text-align: center;
+      text-align: left;
       margin-bottom: 20px;
+      
+      em {
+        color: $accent;
+        font-style: normal;
+        font-weight: bold;
+      }
       
       img {
       }
@@ -22,12 +28,16 @@ body {
       blockquote {
             font-style: italic;
       }
+
+      code {
+        font-family: monospace;
+      }
 }
 
 header, footer {
       font-family: $font-stack;
-      background: $light;
-      color: $dark;
+      background: $back;
+      color: $front;
       height: 2em;
       display: flex;
       align-items: center;
@@ -54,7 +64,7 @@ th, td {
 }
 
 tr {
-      border-bottom: 1px solid $light;
+      border-bottom: 1px solid $front;
 }
 
 a, a:visited {
