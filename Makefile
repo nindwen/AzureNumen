@@ -1,10 +1,10 @@
-default: output/index.html output/css/main.css push
+default: output/index.html output/main.css push
 
-output/index.html: index.md main.css head.html head2.html foot.html
-	pandoc $< | cat head.html main.css head2.html - foot.html > $@
+output/index.html: index.md output/main.css head.html head2.html foot.html
+	pandoc $< | cat head.html output/main.css head2.html - foot.html > $@
 
-main.css: main.scss
-	sass --style compressed --update .:.
+output/main.css: main.scss
+	sass --style compressed main.scss output/main.css
 
 .PHONY: push
 push:
