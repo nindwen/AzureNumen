@@ -1,72 +1,65 @@
-$back: #f0f0f0;
+$back: #fefefe;
 $front: #1b1b1b;
 $accent: #de935f;
 
-$font-stack: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+// $font-stack: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+$font-stack: Impact, Charcoal, sans-serif;
+// $font-stack: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+$mono-stack: "Courier New", Courier, monospace;
 
-body {
-      font-family: $font-stack;
-      background: $back;
-      color: $front;
+html, body {
+  font-family: $font-stack;
+  background: $back;
+  color: $front;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 #content {
-      max-width: 500px;
-      margin: auto;
-      text-align: left;
-      margin-bottom: 20px;
-      
-      em {
-        color: $accent;
-        font-style: normal;
-        font-weight: bold;
-      }
-      
-      img {
-      }
+  background: $back;
+  max-width: 500px;
+  padding: 50px;
+  padding-bottom: 0px;
+  margin: auto;
+  text-align: left;
+  height: 100%;
+  line-height: 1.5;
 
-      blockquote {
-            font-style: italic;
-      }
+  em {
+    color: $accent;
+    font-style: normal;
+    font-weight: bold;
+  }
 
-      code {
-        font-family: monospace;
-      }
-}
+  img {
+  }
 
-header, footer {
-      font-family: $font-stack;
-      background: $back;
-      color: $front;
-      height: 2em;
-      display: flex;
-      align-items: center;
-      display: -webkit-flex;
-      -webkit-align-items: center;
+  blockquote {
+    font-style: italic;
+  }
 
-      width: 500px;
-      margin: auto;
-      padding: 10px;
-
-
-       h1 {
-             font-weight: 800;
-       }
+  code {
+    font-family: $mono-stack;
+    font-size: 90%;
+    color: grey;
+    line-height: 1.0;
+  }
 }
 
 table {
-      margin: 0 auto;
+  margin: 0 auto;
 }
 
 th, td {
-      padding: 10px;
-      margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 tr {
-      border-bottom: 1px solid $front;
+  border-bottom: 1px solid $front;
 }
 
 a, a:visited {
-      color: $accent;
+  color: $accent;
 }
