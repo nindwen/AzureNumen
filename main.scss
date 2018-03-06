@@ -1,14 +1,13 @@
 $back: #fefefe;
 $front: #1b1b1b;
-$accent: #de935f;
+$accent: #66006f;
 
-// $font-stack: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-$font-stack: Impact, Charcoal, sans-serif;
-// $font-stack: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+$font-stack: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 $mono-stack: "Courier New", Courier, monospace;
 
 html, body {
   font-family: $font-stack;
+  font-size: 14pt;
   background: $back;
   color: $front;
   height: 100%;
@@ -21,9 +20,9 @@ html, body {
   max-width: 500px;
   padding: 50px;
   padding-bottom: 0px;
+  padding-top: 0px;
   margin: auto;
   text-align: left;
-  height: 100%;
   line-height: 1.5;
 
   em {
@@ -37,13 +36,21 @@ html, body {
 
   blockquote {
     font-style: italic;
+    border-left: solid lightgrey 4px;
+    padding-left: 20px;
+    color: grey;
   }
 
   code {
+    display: block;
     font-family: $mono-stack;
     font-size: 90%;
     color: grey;
     line-height: 1.0;
+  }
+
+  h3 {
+      color: $accent;
   }
 }
 
@@ -63,3 +70,30 @@ tr {
 a, a:visited {
   color: $accent;
 }
+
+header {
+  max-width: 200px;
+  margin: auto;
+}
+
+header img {
+    max-width: 100%;
+}
+
+hr {
+    border: 0; 
+    height: 2px; 
+    background-image: linear-gradient(left, $back, $accent, $back);
+    background-image: -webkit-linear-gradient(left, $back, $accent, $back);
+    background-image: -moz-linear-gradient(left, $back, $accent, $back);
+    background-image: -ms-linear-gradient(left, $back, $accent, $back);
+    background-image: -o-linear-gradient(left, $back, $accent, $back); 
+}
+
+footer {
+    text-align: center;
+    color: grey;
+    margin: 20px;
+    font-size: 90%;
+}
+
