@@ -6,88 +6,94 @@ $font-stack: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 $mono-stack: "Courier New", Courier, monospace;
 
 html, body {
-  font-family: $font-stack;
-  font-size: 14pt;
-  background: $back;
-  color: $front;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
+    font-family: $font-stack;
+    font-size: 14pt;
+    background: $back;
+    color: $front;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 #content {
-  background: $back;
-  max-width: 500px;
-  padding: 50px;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  margin: auto;
-  text-align: left;
-  line-height: 1.5;
+    background: $back;
+    max-width: 500px;
+    padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.5;
 
-  em {
-    color: $accent;
-    font-style: normal;
-    font-weight: bold;
-  }
+    em {
+        color: $accent;
+        font-style: normal;
+        font-weight: bold;
+    }
 
-  img {
-  }
+    blockquote {
+        font-style: italic;
+        border-left: solid lightgrey 4px;
+        padding-left: 20px;
+        color: grey;
+    }
 
-  blockquote {
-    font-style: italic;
-    border-left: solid lightgrey 4px;
-    padding-left: 20px;
-    color: grey;
-  }
+    code {
+        display: block;
+        font-family: $mono-stack;
+        font-size: 90%;
+        color: grey;
+        line-height: 1.0;
+    }
 
-  code {
-    display: block;
-    font-family: $mono-stack;
-    font-size: 90%;
-    color: grey;
-    line-height: 1.0;
-  }
+    h3 {
+        color: $accent;
+    }
 
-  h3 {
-      color: $accent;
-  }
-}
+    table {
+        margin: 0 auto;
 
-table {
-  margin: 0 auto;
-}
+        th, td {
+            padding: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
 
-th, td {
-  padding: 10px;
-  margin: 10px;
-}
+        td:nth-child(1) {
+            font-weight: bold;
+            color: $accent;
+        }
 
-tr {
-  border-bottom: 1px solid $front;
-}
+        tr {
+            border-bottom: 1px solid $front;
+        }
+    }
 
-a, a:visited {
-  color: $accent;
+
+    a, a:visited {
+        color: $accent;
+    }
+
 }
 
 header {
-  max-width: 200px;
-  margin: auto;
+    max-width: 200px;
+    margin: auto;
+
+    img {
+        max-width: 100%;
+    }
 }
 
-header img {
-    max-width: 100%;
-}
 
 hr {
     border: 0; 
     height: 2px; 
-    background-image: linear-gradient(left, $back, $accent, $back);
-    background-image: -webkit-linear-gradient(left, $back, $accent, $back);
-    background-image: -moz-linear-gradient(left, $back, $accent, $back);
-    background-image: -ms-linear-gradient(left, $back, $accent, $back);
-    background-image: -o-linear-gradient(left, $back, $accent, $back); 
+    background-image: linear-gradient(to left, $back, $accent, $back);
+    background-image: -webkit-linear-gradient(to left, $back, $accent, $back);
+    background-image: -moz-linear-gradient(to left, $back, $accent, $back);
+    background-image: -ms-linear-gradient(to left, $back, $accent, $back);
+    background-image: -o-linear-gradient(to left, $back, $accent, $back); 
 }
 
 footer {

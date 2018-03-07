@@ -1,4 +1,4 @@
-default: output/index.html output/main.css push
+default: output/index.html push
 
 output/index.html: index.md output/main.css head.html head2.html foot.html
 	pandoc $< | cat head.html output/main.css head2.html - foot.html > $@

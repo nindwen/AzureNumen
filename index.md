@@ -15,7 +15,9 @@ This is my front page / contact info.
 --------     -----------------------------------------
    email     me (at) nindwen.blue
   github     [github.com/nindwen](http://github.com/nindwen)
+ keybase     [keybase.io/nindwen](https://keybase.io/nindwen)
  twitter     [twitter.com/nindwen](https://twitter.com/nindwen)
+linkedIn     [linkedin.com/in/laura-ketola](https://www.linkedin.com/in/laura-ketola/)
 --------     -----------------------------------------
 
 ***
@@ -32,7 +34,7 @@ I'm most confident in my skills in Java and the Javascript ecosystem (Html5 & No
 
 ### Life 🌈
 
-> All we have to decide is what to do with the time that is given us.<Paste>
+> All we have to decide is what to do with the time that is given us.
 
 I'm a huge Tolkien geek, and can likely talk forever about those things. Similarly my other media interest are mostly fantasy or science fiction.
 
