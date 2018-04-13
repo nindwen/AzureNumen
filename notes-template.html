@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>$title$</title>
+$if(highlighting-css)$
+<style type="text/css">
+$highlighting-css$
+</style>
+$endif$
+<link rel="stylesheet" href="/notes.css">
+<link rel="shortcut icon" type="image/png" href="/66006f.png"/>
+<meta name="theme-color" content="#66006f">
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+<header>
+<a href="/">nindwen.blue</a> » <a href="/notes">notes</a> » $title$
+$if(date)$
+<span class="date">$date$</span>
+$endif$
+</header>
+$if(toc)$
+<nav id="$idprefix$TOC">
+$table-of-contents$
+</nav>
+$endif$
+<div id="content">
+$body$
+</div>
+$for(include-after)$
+$include-after$
+$endfor$
+<footer>
+</footer>
+</body>
+</html>

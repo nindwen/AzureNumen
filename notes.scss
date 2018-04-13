@@ -1,0 +1,116 @@
+$faint: #bbb;
+$front: #333333;
+$back: #fefefe;
+
+body {
+    background: $back;
+}
+
+#content, header, footer {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16pt;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    color: $front;
+     
+    img {
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px $front;
+        max-width: 90%;
+    }
+
+    figcaption {
+        text-align: center;
+        font-style: italic;
+        color: grey;
+        font-size: 80%;
+    }
+}
+
+header, footer,
+header a,
+header a:visited {
+    color: $faint;
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 60px;
+    margin-top: 20px;
+
+    .date {
+        float: right;
+    }
+}
+
+footer {
+    border-top: 1px solid $faint;
+
+}
+
+h1 {
+    border-bottom: 1px solid $faint;
+    font-size: 150%;
+}
+
+h2, h3, h4, h5 {
+    font-size: 120%;
+}
+
+h1:before {
+    content: '# ';
+    color: $faint;
+}
+
+h2:before {
+    content: '## ';
+    color: $faint;
+}
+
+h3:before {
+    content: '### ';
+    color: $faint;
+}
+
+div.sourceCode {
+    background: $front;
+    color: $back;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 80%;
+    box-shadow: 1px 1px 10px $front;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: solid $faint 4px;
+    padding-left: 20px;
+    color: grey;
+}
+
+ul {
+    padding: 50px;
+    border: 1px solid $faint;
+    border-radius: 10px;
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .date {
+        color: $faint;
+    }
+    .title {
+        padding-left: 30px;
+        color: $front;
+        text-decoration: underline;
+    }
+}
+
