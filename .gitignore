@@ -1,3 +1,5 @@
 output/*
+!output/.gitignore
+!output/notes/
 .sass-cache/
 *.css*
