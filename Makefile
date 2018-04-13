@@ -3,19 +3,18 @@ OUT_NOTES := $(patsubst notes/%.md,output/notes/%.html,$(SRC_NOTES))
 
 default: push
 
-output/index.html: index.md output/main.css head.html head2.html foot.html
-	pandoc $< | cat head.html output/main.css head2.html - foot.html > $@
+output/index.html: index.md output/main.css template/head.html template/head2.html template/foot.html
+	pandoc $< | cat template/head.html output/main.css template/head2.html - template/foot.html > $@
 
-output/%.css: %.scss
+output/%.css: style/%.scss
 	sass --sourcemap=none --style compressed $< $@
 
 output/notes/%.html: notes/%.md output/notes.css 
-	pandoc --highlight-style=breezedark --template=notes-template.html $< > $@
+	pandoc --highlight-style=breezedark --template=template/notes-template.html $< > $@
 
 .PHONY: notes
-notes: $(OUT_NOTES) output/notes.css head.html head3.html foot.html
-	ruby build_index.rb | cat head.html output/notes.css head3.html - foot.html > output/notes/index.html
-	echo $(OUT_NOTES)
+notes: $(OUT_NOTES) output/notes.css template/head.html template/head3.html template/foot.html
+	ruby build_index.rb | cat template/head.html output/notes.css template/head3.html - template/foot.html > output/notes/index.html
 
 .PHONY: push
 push: output/index.html notes
